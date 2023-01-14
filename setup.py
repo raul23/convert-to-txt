@@ -10,7 +10,7 @@ from convert_to_txt import __version__, __test_version__
 
 if sys.version_info < (3, 7):
     raise RuntimeError("""
-    ocr v0.1.0+ supports Python 3.7 and above. 
+    convert_to_txt v0.1.0+ supports Python 3.7 and above. 
     """)
 
 excluded = []
