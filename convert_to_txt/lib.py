@@ -213,7 +213,7 @@ def convert(input_file, output_file=None,
         if return_txt:
             remove_file(output_file)
         return 1
-    logger.info(blue("OCR successful!"))
+    logger.info(blue("Conversion successful!"))
     # Only remove output file if it is a temp file (i.e. return_txt = True)
     if return_txt:
         with open(output_file, 'r', encoding="utf8", errors='ignore') as f:
@@ -442,4 +442,3 @@ def touch(path, mode=0o666, exist_ok=True):
     logger.debug(f"Creating file: '{path}'")
     Path(path).touch(mode, exist_ok)
     logger.debug("File created!")
-
