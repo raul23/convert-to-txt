@@ -167,6 +167,7 @@ def convert(input_file, output_file=None,
     func_params = locals().copy()
     file_hash = None
     mime_type = get_mime_type(input_file)
+    logger.debug(f'mime type: {mime_type}')
     if mime_type == 'text/plain':
         logger.warning(yellow('The file is already in .txt'))
         # Return text if no output file was specified
@@ -294,6 +295,7 @@ def convert_to_txt(input_file, output_file, mime_type,
         logger.debug('Saving the text content')
         with open(output_file, 'w') as f:
             f.write(text)
+        return convert_result_from_shell_cmd(Result(returncode=0))
     elif (not mime_type.startswith('image/vnd.djvu')) \
             and mime_type.startswith('image/'):
         msg = f'The file looks like a normal image ({mime_type}), skipping ' \
@@ -303,6 +305,7 @@ def convert_to_txt(input_file, output_file, mime_type,
     else:
         logger.debug(f"Trying to use calibre's ebook-convert to convert the {mime_type} file to .txt")
         result = ebook_convert(input_file, output_file)
+    logger.debug(f'Result from conversion: {result}')
     return result
 
 
