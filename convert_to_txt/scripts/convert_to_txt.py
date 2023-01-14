@@ -215,7 +215,7 @@ def setup_argparser():
         title=yellow('Input/Output files'))
     input_output_files_group.add_argument(
         'input',
-        help='Path of the file (pdf, djvu or image) that will be converted to txt.')
+        help='Path of the file (pdf, djvu, epub, word) that will be converted to txt.')
     input_output_files_group.add_argument(
         'output', default=OUTPUT_FILE, nargs='*', action=required_length(0, 1),
         help='Path of the output txt file.'
@@ -259,4 +259,3 @@ def main():
 if __name__ == '__main__':
     retcode = main()
     show_exit_code(retcode)
-
