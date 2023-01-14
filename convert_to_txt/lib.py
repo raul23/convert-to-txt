@@ -208,8 +208,12 @@ def convert(input_file, output_file=None,
         logger.debug("Converted text is valid!")
     else:
         logger.error(red("Conversion failed!"))
-        logger.error(red(f'The converted txt with size {os.stat(output_file).st_size} '
-                         'bytes does not seem to contain text'))
+        size = os.stat(output_file).st_size
+        if size == 0:
+            logger.error(red('The converted file is empty'))
+        else:
+            logger.error(red(f'The converted txt with size {os.stat(output_file).st_size} '
+                             'bytes does not seem to contain text'))
         # Only remove output file if it is a temp file (i.e. return_txt = True)
         if return_txt:
             remove_file(output_file)
