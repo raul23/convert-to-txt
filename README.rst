@@ -139,7 +139,7 @@ the other conversion tools.
 As comparison, here are the times taken to convert a 154-pages PDF document for both supported conversion methods:
 
 - ``pdftotext``: 4.27s
-- ```ebook-convert`` (calibre): 80.91s 
+- ``ebook-convert`` (calibre): 80.91s 
 
 Example: convert a ``pdf`` file to ``txt``
 ==========================================
