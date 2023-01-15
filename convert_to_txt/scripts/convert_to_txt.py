@@ -4,7 +4,9 @@ import os
 
 from convert_to_txt import __version__
 from convert_to_txt.lib import (convert, setup_log, blue, green, red, yellow,
-                 LOGGING_FORMATTER, LOGGING_LEVEL, CONVERT_PAGES)
+                 LOGGING_FORMATTER, LOGGING_LEVEL, CONVERT_PAGES,
+                 DJVU_CONVERT_METHOD, EPUB_CONVERT_METHOD, MSWORD_CONVERT_METHOD,
+                 PDF_CONVERT_METHOD)
 
 # import ipdb
 
@@ -208,6 +210,27 @@ def setup_argparser():
             outputs pages 1 to 10, and specification 1,3,99999-4 outputs pages 1
             and 3, followed by all the document pages in reverse order up to page
             4." Ref.: https://man.archlinux.org/man/djvutxt.1.en""")
+    convert_group.add_argument(
+        '--djvu', dest='djvu_convert_method',
+        choices=['djvutxt', 'ebook-convert'], default=DJVU_CONVERT_METHOD,
+        help='Set the conversion method for djvu documents.'
+             + get_default_message(DJVU_CONVERT_METHOD))
+    convert_group.add_argument(
+        '--epub', dest='epub_convert_method',
+        choices=['epubtxt', 'ebook-convert'], default=EPUB_CONVERT_METHOD,
+        help='Set the conversion method for epub documents.'
+             + get_default_message(EPUB_CONVERT_METHOD))
+    convert_group.add_argument(
+        '--msword', dest='msword_convert_method',
+        choices=['textutil', 'catdoc', 'ebook-convert'],
+        default=MSWORD_CONVERT_METHOD,
+        help='Set the conversion method for msword documents.'
+             + get_default_message(MSWORD_CONVERT_METHOD))
+    convert_group.add_argument(
+        '--pdf', dest='pdf_convert_method',
+        choices=['pdftotext', 'ebook-convert'], default=PDF_CONVERT_METHOD,
+        help='Set the conversion method for pdf documents.'
+             + get_default_message(PDF_CONVERT_METHOD))
     # ==================
     # Input/output files
     # ==================
@@ -243,7 +266,11 @@ def main():
             output = args.output[0]
         else:
             output = args.output
-        exit_code = convert(args.input, output, convert_pages=args.pages)
+        exit_code = convert(args.input, output, convert_pages=args.pages,
+            djvu_convert_method=args.djvu_convert_method,
+            epub_convert_method=args.epub_convert_method,
+            msword_convert_method=args.msword_convert_method,
+            pdf_convert_method=args.pdf_convert_method)
     except KeyboardInterrupt:
         print_(yellow('\nProgram stopped!'))
         exit_code = 2
