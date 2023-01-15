@@ -184,10 +184,10 @@ def setup_argparser():
     name_input = 'input_file'
     name_output = 'output_file'
     usage_msg = blue(f'%(prog)s [OPTIONS] {{{name_input}}} [{{{name_output}}}]')
-    end_msg = 'Convert documents (pdf, djvu, epub, word) to txt.'
+    desc_msg = 'Convert documents (pdf, djvu, epub, word) to txt.'
     parser = ArgumentParser(
         description="",
-        usage=f"{usage_msg}\n\n{end_msg}",
+        usage=f"{usage_msg}\n\n{desc_msg}",
         add_help=False,
         formatter_class=lambda prog: MyFormatter(
             prog, max_help_position=50, width=width))
