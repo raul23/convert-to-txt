@@ -125,6 +125,9 @@ Let's say you want to convert specific pages of a *pdf* file to *txt*, then the 
 
 Sample output::
 
+ Starting document conversion to txt...
+ Conversion successful!
+
 Through the API
 ---------------
 TODO
