@@ -220,10 +220,10 @@ Finally, just like you can set the conversion method via the command-line, you c
 
 .. code-block:: python
 
-   def convert(input_file, output_file=None,
-               convert_pages=None,
-               djvu_convert_method='djvutxt',
-               epub_convert_method='epubtxt',
-               msword_convert_method='textutil',
-               pdf_convert_method='pdftotext', **kwargs)
+   convert(input_file, output_file=None,
+           convert_pages=None,
+           djvu_convert_method='djvutxt',
+           epub_convert_method='epubtxt',
+           msword_convert_method='textutil',
+           pdf_convert_method='pdftotext', **kwargs)
  
