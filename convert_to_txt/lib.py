@@ -345,30 +345,6 @@ def get_mime_type(file_path):
     return mimetypes.guess_type(file_path)[0]
 
 
-# Return number of pages in a pdf document
-def get_pages_in_pdf(file_path, cmd='mdls'):
-    assert cmd in ['mdls', 'pdfinfo']
-    if command_exists(cmd) and cmd == 'mdls':
-        cmd = f'mdls -raw -name kMDItemNumberOfPages "{file_path}"'
-        args = shlex.split(cmd)
-        result = subprocess.run(args, stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE)
-        if '(null)' in str(result.stdout):
-            return get_pages_in_pdf(file_path, cmd='pdfinfo')
-    else:
-        cmd = f'pdfinfo "{file_path}"'
-        args = shlex.split(cmd)
-        result = subprocess.run(args, stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE)
-        if result.returncode == 0:
-            result = convert_result_from_shell_cmd(result)
-            result.stdout = int(re.findall('^Pages:\s+([0-9]+)',
-                                           result.stdout,
-                                           flags=re.MULTILINE)[0])
-            return result
-    return convert_result_from_shell_cmd(result)
-
-
 def isalnum_in_file(file_path):
     with open(file_path, 'r', encoding="utf8", errors='ignore') as f:
         isalnum = False
