@@ -58,3 +58,4 @@ To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_tx
 
  $ convert_to_txt -h
  usage: convert_to_txt [OPTIONS] {input_file} [{output_file}]
+
