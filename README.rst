@@ -59,3 +59,33 @@ To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_tx
  $ convert_to_txt -h
  usage: convert_to_txt [OPTIONS] {input_file} [{output_file}]
 
+How the conversion is applied
+=============================
+Here are the important steps that the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ 
+follows when converting a given document to *txt*:
+
+TODO
+
+Example: convert a ``pdf`` file to ``txt``
+==========================================
+Through the script ``convert_to_txt.py``
+----------------------------------------
+Let's say you want to convert specific pages of a *pdf* file to *txt*, then the following command will do the trick::
+
+ convert_to_txt ~/Data/ocr/K.pdf K.txt -p 15-10,3,23-30 --verbose 
+
+`:information_source:` Explaining the command
+
+- ``-p 15-10,3,23-30``: specifies that pages 15 to 10 (reverse order), 3 and 23 to 30 from the given *pdf* document will be OCRed.
+
+  `:warning:` No spaces when specifying the pages.
+- ``~/Data/ocr/K.pdf K.txt``: these are the input and output files, respectively.
+
+  **NOTE:** by default if no output file is specified, then the converted text will be saved as ``output.txt`` 
+  directly under the working directory.
+
+Sample output::
+
+Through the API
+---------------
+TODO
