@@ -103,7 +103,15 @@ How the conversion is applied
 Here are the important steps that the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ 
 follows when converting a given document to *txt*:
 
-TODO
+1. If the given document is already in *.txt*, then no need to go further!
+2. According to the mime type, the corresponding conversion tool is called upon:
+
+   i. *image/vnd.djvu*: ``djvutxt``
+   ii. *application/epub+zip*: ``unzip``
+   iii. *application/msword*: ``catdoc`` or ``textutil``
+   iv. *application/pdf*: ``pdftotext``
+   v. ``ebook-convert`` if the other conversion tools are not found
+3. The output *txt* file is checked if it actually contains text. If it doesn't, the user is warned that OCR failed.
 
 Example: convert a ``pdf`` file to ``txt``
 ==========================================
