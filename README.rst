@@ -208,7 +208,7 @@ Sample output::
  Starting document conversion to txt...
  Conversion successful!
 
-Finally, just like you can set the conversion method via the command-line, you can also do it via the API: 
+Finally, just like you can set the conversion method via the `command-line <#script-options>`_, you can also do it via the API: 
 
 .. code-block:: python
 
