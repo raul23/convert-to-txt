@@ -58,8 +58,32 @@ Script options
 ==============
 To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ list of options and their descriptions::
 
- $ convert_to_txt -h
- usage: convert_to_txt [OPTIONS] {input_file} [{output_file}]
+   $ convert_to_txt -h
+   usage: convert_to_txt [OPTIONS] {input_file} [{output_file}]
+
+   Convert documents (pdf, djvu, epub, word) to txt.
+
+   General options:
+     -h, --help                              Show this help message and exit.
+     -v, --version                           Show program's version number and exit.
+     -q, --quiet                             Enable quiet mode, i.e. nothing will be printed.
+     --verbose                               Print various debugging information, e.g. print traceback when there is an exception.
+     --log-level {debug,info,warning,error}  Set logging level. (default: info)
+     --log-format {console,only_msg,simple}  Set logging formatter. (default: only_msg)
+
+   Convert-to-txt options:
+     -p, --pages PAGES                       "Specify which pages should be processed. When this option is not specified, 
+                                             the text of all pages of the documents is concatenated into the output file. 
+                                             The page specification PAGES contains one or more comma-separated page ranges. 
+                                             A page range is either a page number, or two page numbers separated by a dash. 
+                                             For instance, specification 1-10 outputs pages 1 to 10, and specification 
+                                             1,3,99999-4 outputs pages 1 and 3, followed by all the document pages in reverse 
+                                             order up to page 4."
+                                             Ref.: https://man.archlinux.org/man/djvutxt.1.en
+
+   Input/Output files:
+     input                                   Path of the file (pdf, djvu, epub, word) that will be converted to txt.
+     output                                  Path of the output txt file. (default: output.txt)
 
 How the conversion is applied
 =============================
