@@ -111,7 +111,7 @@ Through the script ``convert_to_txt.py``
 ----------------------------------------
 Let's say you want to convert specific pages of a *pdf* file to *txt*, then the following command will do the trick::
 
- convert_to_txt ~/Data/convert/K.pdf K.txt -p 15-10,3,23-30 --verbose 
+ convert_to_txt ~/Data/convert/K.pdf K.txt -p 15-10,3,23-30 
 
 `:information_source:` Explaining the command
 
