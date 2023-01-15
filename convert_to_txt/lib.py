@@ -201,7 +201,7 @@ def convert(input_file, output_file=None,
     result = convert_to_txt(**func_params)
     statuscode = result.returncode
     if statuscode == 0:
-        logger.info('Conversion terminated')
+        logger.debug('Conversion terminated')
     # Check conversion
     logger.debug('Checking converted text...')
     if statuscode == 0 and isalnum_in_file(output_file):
