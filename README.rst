@@ -141,7 +141,7 @@ To convert a *pdf* file to *txt* using the API:
 
 `:information_source:` Explaining the snippet of code
 
-- ``convert(input_file, output_file=None, ocr_command=OCR_COMMAND, convert_pages=CONVERT_PAGES)``:
+- ``convert(input_file, output_file=None, convert_pages=CONVERT_PAGES)``:
 
   By default ``output_file`` is None and hence ``convert()`` will return the text from the conversion. 
   If you set ``output_file`` to for example **output.txt**, then ``convert()`` will just return a status code
