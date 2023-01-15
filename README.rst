@@ -72,14 +72,14 @@ Through the script ``convert_to_txt.py``
 ----------------------------------------
 Let's say you want to convert specific pages of a *pdf* file to *txt*, then the following command will do the trick::
 
- convert_to_txt ~/Data/ocr/K.pdf K.txt -p 15-10,3,23-30 --verbose 
+ convert_to_txt ~/Data/convert/K.pdf K.txt -p 15-10,3,23-30 --verbose 
 
 `:information_source:` Explaining the command
 
-- ``-p 15-10,3,23-30``: specifies that pages 15 to 10 (reverse order), 3 and 23 to 30 from the given *pdf* document will be OCRed.
+- ``-p 15-10,3,23-30``: specifies that pages 15 to 10 (reverse order), 3 and 23 to 30 from the given *pdf* document will be converted to *txt*.
 
   `:warning:` No spaces when specifying the pages.
-- ``~/Data/ocr/K.pdf K.txt``: these are the input and output files, respectively.
+- ``~/Data/convert/K.pdf K.txt``: these are the input and output files, respectively.
 
   **NOTE:** by default if no output file is specified, then the converted text will be saved as ``output.txt`` 
   directly under the working directory.
