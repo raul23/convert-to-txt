@@ -204,3 +204,23 @@ Sample output::
  Output text file already exists: output.txt
  Starting document conversion to txt...
  Conversion successful!
+
+Finally, just like you can set the conversion method via the command-line, you can also do it via the API: 
+
+.. code-block:: python
+
+   from convert_pages.lib import convert
+   
+   txt = convert('/Users/test/Data/convert/B.pdf', convert_pages='10-12', pdf_convert_method='ebook-convert')
+   
+`:information_source:` The full signature for the function ``convert()``:
+
+.. code-block:: python
+
+   def convert(input_file, output_file=None,
+               convert_pages=CONVERT_PAGES,
+               djvu_convert_method=DJVU_CONVERT_METHOD,
+               epub_convert_method=EPUB_CONVERT_METHOD,
+               msword_convert_method=MSWORD_CONVERT_METHOD,
+               pdf_convert_method=PDF_CONVERT_METHOD, **kwargs)
+ 
