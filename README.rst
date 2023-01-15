@@ -130,4 +130,37 @@ Sample output::
 
 Through the API
 ---------------
-TODO
+To convert a *pdf* file to *txt* using the API:
+
+.. code-block:: python
+
+   from convert_to_txt.lib import convert
+   
+   txt = convert('/Users/test/Data/convert/B.pdf', convert_pages='10-12')
+   # Do something with `txt`
+
+`:information_source:` Explaining the snippet of code
+
+- ``convert(input_file, output_file=None, ocr_command=OCR_COMMAND, convert_pages=CONVERT_PAGES)``:
+
+  By default ``output_file`` is None and hence ``convert()`` will return the text from the conversion. 
+  If you set ``output_file`` to for example **output.txt**, then ``convert()`` will just return a status code
+  (1 for error and 0 for success) and will write the text from the conversion to **output.txt**.
+- The variable ``txt`` will contain the text from the conversion.
+
+By default when using the API, the loggers are disabled. If you want to enable them, use the
+function ``setup_log()`` at the beginning of your code before the conversion:
+
+.. code-block:: python
+
+   from convert_pages.lib import convert, setup_log
+   
+   setup_log(logging_level='INFO')
+   txt = convert('/Users/test/Data/convert/B.pdf', convert_pages='10-12')
+   # Do something with `txt`
+   
+Sample output::
+
+ Output text file already exists: output.txt
+ Starting document conversion to txt...
+ Conversion successful!
