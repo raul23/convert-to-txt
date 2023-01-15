@@ -64,26 +64,30 @@ To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_tx
    Convert documents (pdf, djvu, epub, word) to txt.
 
    General options:
-     -h, --help                              Show this help message and exit.
-     -v, --version                           Show program's version number and exit.
-     -q, --quiet                             Enable quiet mode, i.e. nothing will be printed.
-     --verbose                               Print various debugging information, e.g. print traceback when there is an exception.
-     --log-level {debug,info,warning,error}  Set logging level. (default: info)
-     --log-format {console,only_msg,simple}  Set logging formatter. (default: only_msg)
+     -h, --help                                Show this help message and exit.
+     -v, --version                             Show program's version number and exit.
+     -q, --quiet                               Enable quiet mode, i.e. nothing will be printed.
+     --verbose                                 Print various debugging information, e.g. print traceback when there is an exception.
+     --log-level {debug,info,warning,error}    Set logging level. (default: info)
+     --log-format {console,only_msg,simple}    Set logging formatter. (default: only_msg)
 
    Convert-to-txt options:
-     -p, --pages PAGES                       "Specify which pages should be processed. When this option is not specified, 
-                                             the text of all pages of the documents is concatenated into the output file. 
-                                             The page specification PAGES contains one or more comma-separated page ranges. 
-                                             A page range is either a page number, or two page numbers separated by a dash. 
-                                             For instance, specification 1-10 outputs pages 1 to 10, and specification 
-                                             1,3,99999-4 outputs pages 1 and 3, followed by all the document pages in reverse 
-                                             order up to page 4."
-                                             Ref.: https://man.archlinux.org/man/djvutxt.1.en
+     -p, --pages PAGES                         "Specify which pages should be processed. When this option is not specified, 
+                                               the text of all pages of the documents is concatenated into the output file. 
+                                               The page specification PAGES contains one or more comma-separated page ranges. 
+                                               A page range is either a page number, or two page numbers separated by a dash. 
+                                               For instance, specification 1-10 outputs pages 1 to 10, and specification 
+                                               1,3,99999-4 outputs pages 1 and 3, followed by all the document pages in reverse 
+                                               order up to page 4." 
+                                               Ref.: https://man.archlinux.org/man/djvutxt.1.en
+     --djvu {djvutxt,ebook-convert}            Set the conversion method for djvu documents. (default: djvutxt)
+     --epub {epubtxt,ebook-convert}            Set the conversion method for epub documents. (default: epubtxt)
+     --msword {textutil,catdoc,ebook-convert}  Set the conversion method for msword documents. (default: textutil)
+     --pdf {pdftotext,ebook-convert}           Set the conversion method for pdf documents. (default: pdftotext)
 
    Input/Output files:
-     input                                   Path of the file (pdf, djvu, epub, word) that will be converted to txt.
-     output                                  Path of the output txt file. (default: output.txt)
+     input                                     Path of the file (pdf, djvu, epub, word) that will be converted to txt.
+     output                                    Path of the output txt file. (default: output.txt)
 
 `:information_source:` Explaining some of the options/arguments
 
