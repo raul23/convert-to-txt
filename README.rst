@@ -85,6 +85,19 @@ To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_tx
      input                                   Path of the file (pdf, djvu, epub, word) that will be converted to txt.
      output                                  Path of the output txt file. (default: output.txt)
 
+`:information_source:` Explaining some of the options/arguments
+
+- The option ``-p, --pages`` is taken straight from `djvutxt <https://man.archlinux.org/man/djvutxt.1.en>`_ option ``--page=pagespec``.
+
+  `:warning:` 
+  
+  - If the option ``-p`` is not used, then by default all pages from the given document will be converted.
+  - If the given document is not a *pdf* or *djvu* file, then the option ``-p`` will be ignored.
+- ``input`` and ``output`` are positional arguments. Thus they must follow directly each other. ``output`` is not required since by
+  default the output *txt* file will be saved as ``output.txt`` directly under the working directory.
+  
+  `:warning:` ``output`` needs to have a *.txt* extension!
+
 How the conversion is applied
 =============================
 Here are the important steps that the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ 
