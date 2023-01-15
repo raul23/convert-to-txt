@@ -117,12 +117,21 @@ Files supported
 ===============
 These are the files that are supported for conversion to *txt* and the corresponding conversion tools used:
 
-- *pdf*: ``pdftotext`` and ``ebook-convert`` (calibre)
-- *djv*: ``djvutxt`` and ``ebook-convert`` (calibre)
-- *epub*: ``unzip`` and ``ebook-convert`` (calibre)
-- *docx* (Word 2007): ``ebook-convert`` (calibre)
-- *doc* (Word 97): ``textutil`` (macOS), ``catdoc``, and ``ebook-convert`` (calibre)
-- *rtf*: ``ebook-convert`` (calibre)
++---------------------+------------------------------+------------------------------+------------------------------+
+| Files supported     | Conversion tool #1           | Conversion tool #2           | Conversion tool #3           |
++=====================+==============================+==============================+==============================+
+| *pdf*               | ``pdftotext``                | ``ebook-convert`` (calibre)  | -                            |
++---------------------+------------------------------+------------------------------+------------------------------+
+| *djvu*              | ``djvutxt``                  | ``ebook-convert`` (calibre)  | -                            |
++---------------------+------------------------------+------------------------------+------------------------------+
+| *epub*              | ``unzip``                    | ``ebook-convert`` (calibre)  | -                            |
++---------------------+------------------------------+------------------------------+------------------------------+
+| *docx* (Word 2007)  | ``ebook-convert`` (calibre)  | -                            | -                            |
++---------------------+------------------------------+------------------------------+------------------------------+
+| *doc* (Word 97)     | ``textutil`` (macOS)         | ``catdoc``                   | ``ebook-convert`` (calibre)  |
++---------------------+------------------------------+------------------------------+------------------------------+
+| *rtf*               | ``ebook-convert`` (calibre)  | -                            | -                            |
++---------------------+------------------------------+------------------------------+------------------------------+
 
 Example: convert a ``pdf`` file to ``txt``
 ==========================================
