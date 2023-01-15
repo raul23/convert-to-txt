@@ -137,7 +137,7 @@ These are the files that are supported for conversion to *txt* and the correspon
 | *rtf*               | ``ebook-convert`` (calibre)  | -                            | -                            |
 +---------------------+------------------------------+------------------------------+------------------------------+
 
-`:information_source:` 
+`:information_source:` Some explanations about the table
 
 - ``epubtxt`` is a fancy way to say ``unzip``.
 - By default, ``ebook-convert`` (calibre) is always used as a last resort since it is slower than
