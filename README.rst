@@ -89,7 +89,7 @@ To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_tx
 
 - The option ``-p, --pages`` is taken straight from `djvutxt <https://man.archlinux.org/man/djvutxt.1.en>`_ option ``--page=pagespec``.
 
-  `:warning:` 
+  `:warning:` Things to watch out when using the ``-p`` option
   
   - If the option ``-p`` is not used, then by default all pages from the given document will be converted.
   - If the given document is not a *pdf* or *djvu* file, then the option ``-p`` will be ignored.
