@@ -162,8 +162,11 @@ def convert_result_from_shell_cmd(old_result):
 
 def convert(input_file, output_file=None,
             convert_pages=CONVERT_PAGES,
+            djvu_convert_method=DJVU_CONVERT_METHOD,
+            epub_convert_method=EPUB_CONVERT_METHOD,
+            msword_convert_method=MSWORD_CONVERT_METHOD,
+            pdf_convert_method=PDF_CONVERT_METHOD,
             **kwargs):
-    # also setup cache outside
     func_params = locals().copy()
     file_hash = None
     mime_type = get_mime_type(input_file)
