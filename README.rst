@@ -167,7 +167,7 @@ Let's say you want to convert specific pages of a *pdf* file to *txt*, then the 
   `:warning:` No spaces when specifying the pages.
 - ``~/Data/convert/K.pdf K.txt``: these are the input and output files, respectively.
 
-  **NOTE:** by default if no output file is specified, then the converted text will be saved as ``output.txt`` 
+  **NOTE:** by default if no output file is specified, then the resultant text will be saved as ``output.txt`` 
   directly under the working directory.
 
 Sample output::
