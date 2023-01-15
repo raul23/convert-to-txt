@@ -16,7 +16,7 @@ This is the environment on which the script `convert_to_txt.py <./convert_to_txt
 
   **NOTE:** On macOS, you don't need ``catdoc`` since it has the built-in ``textutil``
   command-line tool that converts any *txt*, *html*, *rtf*, 
-  *rtfd*, *doc*, *docx*, *wordml*, *odt*, or *webarchive* file.
+  *rtfd*, *doc*, *docx*, *wordml*, *odt*, or *webarchive* file
 * `DjVuLibre <http://djvu.sourceforge.net/>`_: it includes ``djvutxt`` for 
   converting *djvu* to *txt*
 * `poppler <https://poppler.freedesktop.org/>`_: it includes ``pdftotext`` for converting *pdf* to *txt*
