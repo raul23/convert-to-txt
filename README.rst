@@ -136,7 +136,7 @@ These are the files that are supported for conversion to *txt* and the correspon
 `:information_source:` By default, ``ebook-convert`` (calibre) is always used as a last resort since it is slower than
 the other conversion tools.
 
-As comparison, here are the times taken to convert a 154-pages PDF document for both supported conversion methods:
+As comparison, here are the times taken to convert a 154-pages PDF document to *txt* for both supported conversion methods:
 
 - ``pdftotext``: 4.27s
 - ``ebook-convert`` (calibre): 80.91s 
