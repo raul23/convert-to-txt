@@ -21,7 +21,7 @@ This is the environment on which the script `convert_to_txt.py <./convert_to_txt
   converting *djvu* to *txt*
 * `poppler <https://poppler.freedesktop.org/>`_: it includes ``pdftotext`` for converting *pdf* to *txt*
 
-`:information_source:` *epub* is converted to *txt by using ``unzip -c {input_file}``
+`:information_source:` *epub* is converted to *txt* by using ``unzip -c {input_file}``
 
 **Optionally:**
 
