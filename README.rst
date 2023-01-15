@@ -23,7 +23,7 @@ This is the environment on which the script `convert_to_txt.py <./convert_to_txt
 
 **Optionally:**
 
-- `calibre <>`_: for converting {*pdf*, *djvu*, *epub*, *msword*} to *txt* by using calibre's own 
+- `calibre <https://calibre-ebook.com/>`_: for converting {*pdf*, *djvu*, *epub*, *msword*} to *txt* by using calibre's own 
   `ebook-convert <https://manual.calibre-ebook.com/generated/en/ebook-convert.html>`_
   
   `:warning:` ``ebook-convert`` is slower than the other conversion tools (``textutil``, ``catdoc``, ``pdftotext``, ``djvutxt``)
