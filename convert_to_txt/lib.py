@@ -197,7 +197,7 @@ def convert(input_file, output_file=None,
             touch(output_file)
     func_params['mime_type'] = mime_type
     func_params['output_file'] = output_file
-    logger.info("Starting text conversion...")
+    logger.info("Starting document conversion to txt...")
     result = convert_to_txt(**func_params)
     statuscode = result.returncode
     if statuscode == 0:
