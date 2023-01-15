@@ -50,11 +50,11 @@ Uninstall
 =========
 To uninstall the `convert_to_txt <./convert_to_txt/>`_ package::
 
- $ pip uninstall ocr
+ $ pip uninstall convert_to_txt
 
 Script options
 ==============
-To display the script `ocr.py <./ocr/scripts/convert_to_txt.py>`_ list of options and their descriptions::
+To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ list of options and their descriptions::
 
- $ ocr -h
+ $ convert_to_txt -h
  usage: convert_to_txt [OPTIONS] {input_file} [{output_file}]
