@@ -261,45 +261,49 @@ def convert_to_txt(input_file, output_file, mime_type,
     elif mime_type == 'application/pdf' and pdf_convert_method == 'pdftotext' \
             and command_exists('pdftotext'):
         logger.debug('The file looks like a pdf, using pdftotext to extract the text')
-        text = ''
-        logger.debug(f'These are all the pages that need to be converted: {convert_pages}')
-        for p in convert_pages.split(','):
-            if '-' in p:
-                p1, p2 = p.split('-')
-                p1 = int(p1)
-                p2 = int(p2)
-                if p1 > p2:
-                    pages_to_process = sorted(range(p2, p1 + 1), reverse=True)
+        if convert_pages:
+            text = ''
+            logger.debug(f'These are all the pages that need to be converted: {convert_pages}')
+            for p in convert_pages.split(','):
+                if '-' in p:
+                    p1, p2 = p.split('-')
+                    p1 = int(p1)
+                    p2 = int(p2)
+                    if p1 > p2:
+                        pages_to_process = sorted(range(p2, p1 + 1), reverse=True)
+                    else:
+                        pages_to_process = sorted(range(p1, p2 + 1))
                 else:
-                    pages_to_process = sorted(range(p1, p2 + 1))
-            else:
-                pages_to_process = [int(p)]
-            logger.debug(f'Pages to process: {pages_to_process}')
-            for i, page_to_process in enumerate(pages_to_process, start=1):
-                logger.debug(f'Processing page {i} of {len(pages_to_process)}')
-                logger.debug(f'Page number: {page_to_process}')
-                tmp_file_txt = tempfile.mkstemp(suffix='.txt')[1]
-                logger.debug(f'Using tmp file {tmp_file_txt}')
-                result = pdftotext(input_file, tmp_file_txt,
-                                   first_page_to_convert=page_to_process,
-                                   last_page_to_convert=page_to_process)
-                if result.returncode == 0:
-                    logger.debug(f"Result of 'pdftotext':\n{result}")
-                    with open(tmp_file_txt, 'r') as f:
-                        data = f.read()
-                        # logger.debug(f"Text content of page {page_to_process}:\n{data}")
-                    text += data
-                else:
-                    msg = red(f"Document couldn't be converted to txt: {result}")
-                    logger.error(f'{msg}')
-                    logger.error(f'Skipping current page ({page_to_process})')
-                # Remove temporary file
-                logger.debug('Cleaning up tmp file')
-                remove_file(tmp_file_txt)
-        logger.debug('Saving the text content')
-        with open(output_file, 'w') as f:
-            f.write(text)
-        return convert_result_from_shell_cmd(Result(returncode=0))
+                    pages_to_process = [int(p)]
+                logger.debug(f'Pages to process: {pages_to_process}')
+                for i, page_to_process in enumerate(pages_to_process, start=1):
+                    logger.debug(f'Processing page {i} of {len(pages_to_process)}')
+                    logger.debug(f'Page number: {page_to_process}')
+                    tmp_file_txt = tempfile.mkstemp(suffix='.txt')[1]
+                    logger.debug(f'Using tmp file {tmp_file_txt}')
+                    result = pdftotext(input_file, tmp_file_txt,
+                                       first_page_to_convert=page_to_process,
+                                       last_page_to_convert=page_to_process)
+                    if result.returncode == 0:
+                        logger.debug(f"Result of 'pdftotext':\n{result}")
+                        with open(tmp_file_txt, 'r') as f:
+                            data = f.read()
+                            # logger.debug(f"Text content of page {page_to_process}:\n{data}")
+                        text += data
+                    else:
+                        msg = red(f"Document couldn't be converted to txt: {result}")
+                        logger.error(f'{msg}')
+                        logger.error(f'Skipping current page ({page_to_process})')
+                    # Remove temporary file
+                    logger.debug('Cleaning up tmp file')
+                    remove_file(tmp_file_txt)
+            logger.debug('Saving the text content')
+            with open(output_file, 'w') as f:
+                f.write(text)
+            return convert_result_from_shell_cmd(Result(returncode=0))
+        else:
+            logger.debug('All pages from the pdf document will be converted to txt')
+            result = pdftotext(input_file, output_file)
     elif (not mime_type.startswith('image/vnd.djvu')) \
             and mime_type.startswith('image/'):
         msg = f'The file looks like a normal image ({mime_type}), skipping ' \
