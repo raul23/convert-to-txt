@@ -133,6 +133,9 @@ These are the files that are supported for conversion to *txt* and the correspon
 | *rtf*               | ``ebook-convert`` (calibre)  | -                            | -                            |
 +---------------------+------------------------------+------------------------------+------------------------------+
 
+`:information_source`: ``ebook-convert`` (calibre) is always used as a last resort since it is slower than
+the other conversion tools.
+
 Example: convert a ``pdf`` file to ``txt``
 ==========================================
 Through the script ``convert_to_txt.py``
