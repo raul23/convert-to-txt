@@ -128,7 +128,7 @@ These are the files that are supported for conversion to *txt* and the correspon
 +---------------------+------------------------------+------------------------------+------------------------------+
 | *djvu*              | ``djvutxt``                  | ``ebook-convert`` (calibre)  | -                            |
 +---------------------+------------------------------+------------------------------+------------------------------+
-| *epub*              | ``unzip``                    | ``ebook-convert`` (calibre)  | -                            |
+| *epub*              | ``epubtxt``                  | ``ebook-convert`` (calibre)  | -                            |
 +---------------------+------------------------------+------------------------------+------------------------------+
 | *docx* (Word 2007)  | ``ebook-convert`` (calibre)  | -                            | -                            |
 +---------------------+------------------------------+------------------------------+------------------------------+
@@ -137,8 +137,11 @@ These are the files that are supported for conversion to *txt* and the correspon
 | *rtf*               | ``ebook-convert`` (calibre)  | -                            | -                            |
 +---------------------+------------------------------+------------------------------+------------------------------+
 
-`:information_source:` By default, ``ebook-convert`` (calibre) is always used as a last resort since it is slower than
-the other conversion tools.
+`:information_source:` 
+
+- ``epubtxt`` is a fancy way to say ``unzip``.
+- By default, ``ebook-convert`` (calibre) is always used as a last resort since it is slower than
+  the other conversion tools.
 
 As comparison, here are the times taken to convert a 154-pages PDF document to *txt* for both supported conversion methods:
 
@@ -218,9 +221,9 @@ Finally, just like you can set the conversion method via the command-line, you c
 .. code-block:: python
 
    def convert(input_file, output_file=None,
-               convert_pages=CONVERT_PAGES,
-               djvu_convert_method=DJVU_CONVERT_METHOD,
-               epub_convert_method=EPUB_CONVERT_METHOD,
-               msword_convert_method=MSWORD_CONVERT_METHOD,
-               pdf_convert_method=PDF_CONVERT_METHOD, **kwargs)
+               convert_pages=None,
+               djvu_convert_method='djvutxt',
+               epub_convert_method='epubtxt',
+               msword_convert_method='textutil',
+               pdf_convert_method='pdftotext', **kwargs)
  
