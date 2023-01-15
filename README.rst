@@ -113,6 +113,17 @@ follows when converting a given document to *txt*:
    v. ``ebook-convert`` if the other conversion tools are not found
 3. The output *txt* file is checked if it actually contains text. If it doesn't, the user is warned that OCR failed.
 
+Files supported
+===============
+These are the files that are supported for conversion to *txt* and the corresponding conversion tools used:
+
+- *pdf*: ``pdftotext`` and ``ebook-convert`` (calibre)
+- *djv*: ``djvutxt`` and ``ebook-convert`` (calibre)
+- *epub*: ``unzip`` and ``ebook-convert`` (calibre)
+- *docx* (Word 2007): ``ebook-convert`` (calibre)
+- *doc* (Word 97): ``textutil`` (macOS), ``catdoc``, and ``ebook-convert`` (calibre)
+- *rtf*: ``ebook-convert`` (calibre)
+
 Example: convert a ``pdf`` file to ``txt``
 ==========================================
 Through the script ``convert_to_txt.py``
