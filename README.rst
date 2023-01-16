@@ -4,6 +4,12 @@ Convert documents (pdf, djvu, epub, word) to txt
 The script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ converts documents (pdf, djvu, epub, word) to *txt*.
 It is based on the great `ebook-tools <https://github.com/na--/ebook-tools>`_ which is written in shell by 
 `na-- <https://github.com/na-->`_.
+|
+
+`:star:` Other related projects based from ``ebook-tools`` to Python:
+
+- `ocr <https://github.com/raul23/ocr>`_: OCR documents (pdf, djvu, and images)
+- `find-isbns <https://github.com/raul23/find-isbns>`_: find ISBNs from ebooks (pdf, djvu, epub) or any string given as input to the script
 
 .. contents:: **Contents**
    :depth: 3
