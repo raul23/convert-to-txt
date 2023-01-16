@@ -205,7 +205,7 @@ To convert a *pdf* file to *txt* using the API:
 - The variable ``txt`` will contain the text from the conversion.
 
 By default when using the API, the loggers are disabled. If you want to enable them, call the
-function ``setup_log()`` (with the desired log level all caps) at the beginning of your code before 
+function ``setup_log()`` (with the desired log level in all caps) at the beginning of your code before 
 the conversion:
 
 .. code-block:: python
