@@ -3,9 +3,7 @@ Convert documents (pdf, djvu, epub, word) to txt
 ================================================
 The script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ converts documents (pdf, djvu, epub, word) to *txt*.
 
-It can optionally also use **OCR** for *pdf*, *djvu* and image files.
-
-This is a Python port of `convert-to-txt.sh <https://github.com/na--/ebook-tools/blob/master/convert-to-txt.sh>`_ from 
+This is a Python port of `convert-to-txt.sh <https://github.com/na--/ebook-tools/blob/master/convert-to-txt.sh>`_ (minus OCR) from 
 `ebook-tools <https://github.com/na--/ebook-tools>`_ written in shell by `na-- <https://github.com/na-->`_.
 
 |
@@ -140,7 +138,7 @@ follows when converting a given document to *txt*:
    iii. *application/msword*: ``catdoc`` or ``textutil``
    iv. *application/pdf*: ``pdftotext``
    v. ``ebook-convert`` if the other conversion tools are not found
-3. The output *txt* file is checked if it actually contains text. If it doesn't, the user is warned that OCR failed.
+3. The output *txt* file is checked if it actually contains text. If it doesn't, the user is warned that the conversion failed.
 
 Files supported
 ===============
