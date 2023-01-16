@@ -3,8 +3,8 @@ Convert documents (pdf, djvu, epub, word) to txt
 ================================================
 The script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ converts documents (pdf, djvu, epub, word) to *txt*.
 
-This is a Python port of `convert-to-txt.sh <https://github.com/na--/ebook-tools/blob/master/convert-to-txt.sh>`_ (minus OCR) from 
-`ebook-tools <https://github.com/na--/ebook-tools>`_ written in shell by `na-- <https://github.com/na-->`_.
+This is a partial Python port of `convert-to-txt.sh <https://github.com/na--/ebook-tools/blob/master/convert-to-txt.sh>`_ 
+(minus OCR) from `ebook-tools <https://github.com/na--/ebook-tools>`_ written in shell by `na-- <https://github.com/na-->`_.
 
 |
 
