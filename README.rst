@@ -6,7 +6,7 @@ It is based on the great `ebook-tools <https://github.com/na--/ebook-tools>`_ wh
 `na-- <https://github.com/na-->`_.
 |
 
-`:star:` Other related projects based from ``ebook-tools``:
+`:star:` Other related projects based on ``ebook-tools``:
 
 - `find-isbns <https://github.com/raul23/find-isbns>`_: find ISBNs from ebooks (pdf, djvu, epub) or any string given as input to the script
 - `ocr <https://github.com/raul23/ocr>`_: OCR documents (pdf, djvu, and images)
