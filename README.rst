@@ -14,7 +14,9 @@ This is a partial Python port of `convert-to-txt.sh <https://github.com/na--/ebo
 - `ocr <https://github.com/raul23/ocr>`_: OCR documents (pdf, djvu, and images)
 - `split-ebooks-into-folders <https://github.com/raul23/split-ebooks-into-folders>`_: split the supplied ebook files into 
   folders with consecutive names
-  
+
+|
+
 .. contents:: **Contents**
    :depth: 3
    :local:
