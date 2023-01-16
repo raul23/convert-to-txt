@@ -30,7 +30,7 @@ This is the environment on which the script `convert_to_txt.py <./convert_to_txt
   
      $ eval `/Applications/DjView.app/Contents/setpath.sh`
    
-   **Ref.:** ReadMe from DjVuLibre
+    **Ref.:** ReadMe from DjVuLibre
   - you need to softlink ``djvutxt`` in ``/user/local/bin`` (or add in ``$PATH``)
 * `poppler <https://poppler.freedesktop.org/>`_: it includes ``pdftotext`` for converting *pdf* to *txt*
 
