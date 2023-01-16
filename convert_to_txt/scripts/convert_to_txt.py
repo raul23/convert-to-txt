@@ -1,6 +1,10 @@
 """
-The script convert_to_txt.py converts documents (pdf, djvu, epub, word) to txt. It is based on the great ebook-tools 
-which is written in shell by na--.
+The script convert_to_txt.py converts documents (pdf, djvu, epub, word) to txt.
+
+It can optionally also use *OCR* for `.pdf`, `.djvu` and image files.
+
+This is a Python port of `convert-to-txt.sh` from `ebook-tools` written in
+Shell by `na--`.
 
 Ref.: https://github.com/na--/ebook-tools
 """
