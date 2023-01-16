@@ -6,7 +6,7 @@ It is based on the great `ebook-tools <https://github.com/na--/ebook-tools>`_ wh
 `na-- <https://github.com/na-->`_.
 |
 
-`:star:` Other related projects based from ``ebook-tools`` to Python:
+`:star:` Other related projects based from ``ebook-tools``:
 
 - `ocr <https://github.com/raul23/ocr>`_: OCR documents (pdf, djvu, and images)
 - `find-isbns <https://github.com/raul23/find-isbns>`_: find ISBNs from ebooks (pdf, djvu, epub) or any string given as input to the script
