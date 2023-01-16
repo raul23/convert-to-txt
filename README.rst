@@ -211,15 +211,28 @@ function ``setup_log()`` at the beginning of your code before the conversion:
 
    from convert_pages.lib import convert, setup_log
    
-   setup_log(logging_level='INFO')
+   setup_log(logging_level='DEBUG')
    txt = convert('/Users/test/Data/convert/B.pdf', convert_pages='10-12')
    # Do something with `txt`
    
 Sample output::
 
- Output text file already exists: output.txt
- Starting document conversion to txt...
- Conversion successful!
+   Running /Users/test/miniconda3/envs/mlpy37/lib/python3.7/site-packages/convert_to_txt/lib.py v0.1.0
+   Verbose option disabled
+   mime type: application/pdf
+   Output text file already exists: output.txt
+   Full path of output text file: '/Users/test/convert_to_txt/test_installation/output.txt'
+   Starting document conversion to txt...
+   The file looks like a pdf, using pdftotext to extract the text
+   These are all the pages that need to be converted: 10-12
+   Pages to process: [10, 11, 12]
+   Processing page 1 of 3
+   Page number: 10
+   Using tmp file /var/folders/b8/k1ndbdn53zs1m078zwwrbc4w0000gn/T/tmpc9ma3mwr.txt
+   Result of 'pdftotext':
+   stdout=, stderr=, returncode=0, args=['pdftotext', '/Users/test/Data/convert/B.pdf',
+   '/var/folders/b8/k1ndbdn53zs1m078zwwrbc4w0000gn/T/tmpc9ma3mwr.txt', '-f', '10', '-l', '10']
+   Cleaning up tmp file
 
 Finally, just like you can set the conversion method via the `command-line <#script-options>`_, you can also do it via the API: 
 
