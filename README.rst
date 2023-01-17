@@ -6,7 +6,7 @@ The script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ con
 This is a partial Python port of `convert-to-txt.sh <https://github.com/na--/ebook-tools/blob/master/convert-to-txt.sh>`_ 
 (minus OCR) from `ebook-tools <https://github.com/na--/ebook-tools>`_ written in shell by `na-- <https://github.com/na-->`_.
 
-`:star:` Other related projects based on ``ebook-tools``:
+`:star:` Other related Python projects based on ``ebook-tools``:
 
 - `find-isbns <https://github.com/raul23/find-isbns>`_: find ISBNs from ebooks (pdf, djvu, epub) or any string given as input to the script
 - `ocr <https://github.com/raul23/ocr>`_: run OCR on documents (pdf, djvu, and images)
