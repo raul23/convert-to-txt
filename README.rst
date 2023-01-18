@@ -12,6 +12,8 @@ This is a partial Python port of `convert-to-txt.sh <https://github.com/na--/ebo
 - `ocr <https://github.com/raul23/ocr>`_: run OCR on documents (pdf, djvu, and images)
 - `split-ebooks-into-folders <https://github.com/raul23/split-ebooks-into-folders>`_: split the supplied ebook files into 
   folders with consecutive names
+- `organize-ebooks <https://github.com/raul23/organize-ebooks>`_: automatically organize folders with potentially huge amounts of 
+  unorganized ebooks. It leverages the previous Python scripts (minus ``split_into_folders``).
 
 |
 
