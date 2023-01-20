@@ -8,14 +8,12 @@ This is a partial Python port of `convert-to-txt.sh <https://github.com/na--/ebo
 
 `:star:` Other related Python projects based on ``ebook-tools``:
 
-- `find-isbns <https://github.com/raul23/find-isbns>`_: find ISBNs from ebooks (pdf, djvu, epub) or any string given as input to the script
-- `ocr <https://github.com/raul23/ocr>`_: run OCR on documents (pdf, djvu, and images)
-- `split-ebooks-into-folders <https://github.com/raul23/split-ebooks-into-folders>`_: split the supplied ebook files into 
-  folders with consecutive names
-- `organize-ebooks <https://github.com/raul23/organize-ebooks>`_: automatically organize folders with potentially huge amounts of 
-  unorganized ebooks. It leverages the previous Python scripts (minus ``split_into_folders``).
-
-|
+  - `find-isbns <https://github.com/raul23/find-isbns>`_: find ISBNs from ebooks (pdf, djvu, epub) or any string given as input to the script
+  - `ocr <https://github.com/raul23/ocr>`_: run OCR on documents (pdf, djvu, and images)
+  - `split-ebooks-into-folders <https://github.com/raul23/split-ebooks-into-folders>`_: split the supplied ebook files into 
+    folders with consecutive names
+  - `organize-ebooks <https://github.com/raul23/organize-ebooks>`_: automatically organize folders with potentially huge amounts of 
+    unorganized ebooks. It leverages the previous Python scripts (minus ``split_into_folders``).
 
 .. contents:: **Contents**
    :depth: 3
