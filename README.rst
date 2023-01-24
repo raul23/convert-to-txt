@@ -44,7 +44,8 @@ This is the environment on which the script `convert_to_txt.py <./convert_to_txt
   - You need to softlink ``djvutxt`` in ``/user/local/bin`` (or add it in ``$PATH``)
 * `poppler <https://poppler.freedesktop.org/>`_: it includes ``pdftotext`` for converting *pdf* to *txt*
 
-`:information_source:` *epub* is converted to *txt* by using ``unzip -c {input_file}``
+`:information_source:` *epub* can be converted to *txt* by using ``unzip -c {input_file}`` but it is not a cleaned conversion
+since HTML data are included.
 
 **Optionally:**
 
@@ -104,7 +105,7 @@ To display the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_tx
                                                order up to page 4." 
                                                Ref.: https://man.archlinux.org/man/djvutxt.1.en
      --djvu {djvutxt,ebook-convert}            Set the conversion method for djvu documents. (default: djvutxt)
-     --epub {epubtxt,ebook-convert}            Set the conversion method for epub documents. (default: epubtxt)
+     --epub {ebook-convert,epubtxt}            Set the conversion method for epub documents. (default: ebook-convert)
      --msword {textutil,catdoc,ebook-convert}  Set the conversion method for msword documents. (default: textutil)
      --pdf {pdftotext,ebook-convert}           Set the conversion method for pdf documents. (default: pdftotext)
 
@@ -144,27 +145,27 @@ Files supported
 ===============
 These are the files that are supported for conversion to *txt* and the corresponding conversion tools used:
 
-+---------------------+------------------------------+------------------------------+------------------------------+
-| Files supported     | Conversion tool #1           | Conversion tool #2           | Conversion tool #3           |
-+=====================+==============================+==============================+==============================+
-| *pdf*               | ``pdftotext``                | ``ebook-convert`` (calibre)  | -                            |
-+---------------------+------------------------------+------------------------------+------------------------------+
-| *djvu*              | ``djvutxt``                  | ``ebook-convert`` (calibre)  | -                            |
-+---------------------+------------------------------+------------------------------+------------------------------+
-| *epub*              | ``epubtxt``                  | ``ebook-convert`` (calibre)  | -                            |
-+---------------------+------------------------------+------------------------------+------------------------------+
-| *docx* (Word 2007)  | ``ebook-convert`` (calibre)  | -                            | -                            |
-+---------------------+------------------------------+------------------------------+------------------------------+
-| *doc* (Word 97)     | ``textutil`` (macOS)         | ``catdoc``                   | ``ebook-convert`` (calibre)  |
-+---------------------+------------------------------+------------------------------+------------------------------+
-| *rtf*               | ``ebook-convert`` (calibre)  | -                            | -                            |
-+---------------------+------------------------------+------------------------------+------------------------------+
++---------------------+-------------------------------+------------------------------+------------------------------+
+| Files supported     | Conversion tool #1            | Conversion tool #2           | Conversion tool #3           |
++=====================+===============================+==============================+==============================+
+| *pdf*               | ``pdftotext``                 | ``ebook-convert`` (calibre)  | -                            |
++---------------------+-------------------------------+------------------------------+------------------------------+
+| *djvu*              | ``djvutxt``                   | ``ebook-convert`` (calibre)  | -                            |
++---------------------+-------------------------------+------------------------------+------------------------------+
+| *epub*              | ``ebook-convert`` (calibre)`` | ``epubtxt``                  | -                            |
++---------------------+-------------------------------+------------------------------+------------------------------+
+| *docx* (Word 2007)  | ``ebook-convert`` (calibre)   | -                            | -                            |
++---------------------+-------------------------------+------------------------------+------------------------------+
+| *doc* (Word 97)     | ``textutil`` (macOS)          | ``catdoc``                   | ``ebook-convert`` (calibre)  |
++---------------------+-------------------------------+------------------------------+------------------------------+
+| *rtf*               | ``ebook-convert`` (calibre)   | -                            | -                            |
++---------------------+-------------------------------+------------------------------+------------------------------+
 
 `:information_source:` Some explanations about the table
 
 - ``epubtxt`` is a fancy way to say ``unzip``.
-- By default, ``ebook-convert`` (calibre) is always used as a last resort when other methods already exist since it is slower than
-  the other conversion tools.
+- By default, ``ebook-convert`` (calibre) is used for converting *epub* to *txt* because it does a better job than 
+  ``epubtxt`` since ``epubtxt`` includes also HTML data.
 
 For comparison, here are the times taken to convert completely a 154-pages PDF document to *txt* for both supported conversion methods:
 
