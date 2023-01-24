@@ -34,7 +34,7 @@ logger.setLevel(logging.CRITICAL + 1)
 # ======================
 CONVERT_PAGES = None
 DJVU_CONVERT_METHOD = 'djvutxt'
-EPUB_CONVERT_METHOD = 'epubtxt'
+EPUB_CONVERT_METHOD = 'ebook-convert'
 MSWORD_CONVERT_METHOD = 'textutil'
 PDF_CONVERT_METHOD = 'pdftotext'
 
