@@ -45,7 +45,7 @@ This is the environment on which the script `convert_to_txt.py <./convert_to_txt
 * `poppler <https://poppler.freedesktop.org/>`_: it includes ``pdftotext`` for converting *pdf* to *txt*
 
 `:information_source:` *epub* can be converted to *txt* by using ``unzip -c {input_file}`` but it is not a cleaned conversion
-since HTML data are included.
+since HTML data also are included.
 
 **Optionally:**
 
