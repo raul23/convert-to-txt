@@ -165,7 +165,7 @@ These are the files that are supported for conversion to *txt* and the correspon
 
 - ``epubtxt`` is a fancy way to say ``unzip``.
 - By default, ``ebook-convert`` (calibre) is used for converting *epub* to *txt* because it does a better job than 
-  ``epubtxt`` since ``epubtxt`` includes also HTML data.
+  ``epubtxt`` since ``epubtxt`` also includes HTML data.
 
 For comparison, here are the times taken to convert completely a 154-pages PDF document to *txt* for both supported conversion methods:
 
