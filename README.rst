@@ -15,11 +15,6 @@ This is a partial Python port of `convert-to-txt.sh <https://github.com/na--/ebo
   - `organize-ebooks <https://github.com/raul23/organize-ebooks>`_: automatically organize folders with potentially huge amounts of 
     unorganized ebooks. It leverages the previous Python scripts (minus ``split_into_folders``).
 
-.. contents:: **Contents**
-   :depth: 3
-   :local:
-   :backlinks: top
-
 Dependencies
 ============
 This is the environment on which the script `convert_to_txt.py <./convert_to_txt/scripts/convert_to_txt.py>`_ was tested:
