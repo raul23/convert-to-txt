@@ -51,9 +51,11 @@ since HTML data are also included.
 
 Installation
 ============
-To install the `convert_to_txt <./convert_to_txt/>`_ package::
+1. Install first the `dependencies <#dependencies>`_.
 
- $ pip install git+https://github.com/raul23/convert-to-txt#egg=convert-to-txt
+2. Then you can install the `convert_to_txt <./convert_to_txt/>`_ package::
+
+   $ pip install git+https://github.com/raul23/convert-to-txt#egg=convert-to-txt
  
 **Test installation**
 
